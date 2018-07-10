@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-    background: #F0F8EA;
+    background: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -12,7 +12,7 @@ body {
 }
 
 .max-width {
-    max-width: 1000px;
+    max-width: 960px;
     margin: auto;
 }
 
@@ -20,34 +20,22 @@ body {
 
 .container {
     width: 95%;
-    max-width: 1000px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
 }
 
 header {
 
     color: #FFFFFF;
-    padding: 1em 0;
-    position: relative;
+    padding: 1em 1em;
+    margin: auto;
 }
 
 header::after {
     content: '';
     clear: both;
     display: block;
-}
-
-.logo {
-    float: left;
-    font-size: 1rem;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.logo a {
-    text-decoration: none;
-    color: #FFFFFF;
 }
 
 .site-nav {
@@ -94,15 +82,6 @@ header::after {
     color: #464655;
 }
 
-.site-nav--icon {
-    display: inline-block;
-    font-size: 1.5em;
-    margin-right: 1em;
-    width: 1.1em;
-    text-align: right;
-    color: rgba(255, 255, 255, .4);
-}
-
 .menu-toggle {
     padding: 1em;
     position: absolute;
@@ -143,62 +122,56 @@ header::after {
     transform: translateY(-3px) rotate(-90deg);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 760px) {
 
+    .site-nav {
+        max-width: 960px;
+        display: flex;
+        justify-content: center;
+    }
     .menu-toggle {
         display: none;
     }
 
     .site-nav {
-        height: 20px;
-        position: relative;
+
         background: transparent;
-        float: right;
         clip-path: initial;
     }
 
-    .site-nav li {
-        display: inline-block;
-        border: none;
+    .site-nav ul {
+        display: flex;
     }
-
-    .site-nav a {
-        padding: 0;
-        margin-left: 3em;
-    }
-
     .site-nav a:hover,
     .site-nav a:focus {
-        background: transparent;
+        color: #4d4dff;
+        background-color: transparent;
     }
-
-    .site-nav--icon {
-        display: none;
-    }
-
 }
 
 /* ----- LANDING -----*/
 .landing {
-    background-image: url("./img/landing.png");
+    background-image: url("../img/landing.png");
     background-size: cover;
-    background-position: center;
     height: 100vh;
+    margin-top: -52px;
 }
 
 .landing-text {
     display: flex;
-    height: 50vh;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-right: 1rem;
     padding-left: 1rem;
 }
+.landing-text-inner {
+    max-width: 960px;
+}
 
 .btn {
     padding: 0.5rem 2rem;
-    border: 1px #ccc solid;
+    border: 1px #4d4dff solid;
     display: inline-block;
     margin: 2rem 0 0;
     border-radius: 50px;
@@ -209,9 +182,10 @@ header::after {
 
 h1 {
     font-size: 5vh;
+    color: #FFFFFF;
 }
 
 .btn:hover {
-    background: #F4F4F4;
+    background: #3333ff;
 }
 
