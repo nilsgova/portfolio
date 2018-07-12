@@ -24,7 +24,7 @@ h2 {
     padding-top: 40px;
 }
 h2:after {
-    background: none repeat scroll 0 0 #4d4dff;
+    background: none repeat scroll 0 0 #0099ff;
     bottom: -5px;
     content: "";
     display: block;
@@ -102,7 +102,7 @@ header::after {
 .site-nav a:hover,
 .site-nav a:focus {
     background: #464655;
-    color: #4d4dff;
+    color: #0099ff;
 }
 
 .menu-toggle {
@@ -118,7 +118,7 @@ header::after {
 .hamburger::after {
     content: '';
     display: block;
-    background: #4d4dff;
+    background: #0099ff;
     height: 3px;
     width: 1.75em;
     border-radius: 3px;
@@ -171,7 +171,7 @@ header::after {
 
     .site-nav a:hover,
     .site-nav a:focus {
-        color: #4d4dff;
+        color: #0099ff;
         background-color: transparent;
     }
     /* ----- ABOUT ----- */
@@ -180,6 +180,9 @@ header::after {
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+    .container {
+        position: absolute;
     }
 }
 
@@ -227,15 +230,16 @@ h1 {
 }
 
 .btn:hover {
-    background: #3333ff;
+    background: #0099ff;
     color: #FFFFFF;
-    border: 1px #3333ff solid;
+    border: 1px #0099ff solid;
 }
 
 /* ----- ABOUT ----- */
 
 .about p {
-    margin: 50px 50px 50px 50px;
+    margin: 50px 50px 0 50px;
     text-align: center;
     line-height: 1.6;
 }
+
