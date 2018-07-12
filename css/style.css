@@ -16,6 +16,29 @@ body {
     margin: auto;
 }
 
+h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 2em;
+    color: #444649;
+    padding-top: 40px;
+}
+h2:after {
+    background: none repeat scroll 0 0 #4d4dff;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 5px;
+    position: center;
+    width: 50px;
+    margin-left: 47%;
+    margin-right: 53%;
+    margin-top: 5px;
+}
+
+
+
+
 /* --- NAVBAR -- */
 
 .container {
@@ -78,8 +101,8 @@ header::after {
 
 .site-nav a:hover,
 .site-nav a:focus {
-    background: #E4B363;
-    color: #464655;
+    background: #464655;
+    color: #4d4dff;
 }
 
 .menu-toggle {
@@ -95,7 +118,7 @@ header::after {
 .hamburger::after {
     content: '';
     display: block;
-    background: #FFFFFF;
+    background: #4d4dff;
     height: 3px;
     width: 1.75em;
     border-radius: 3px;
@@ -124,11 +147,14 @@ header::after {
 
 @media (min-width: 760px) {
 
+    /* ---- NAVBAR ---- */
+
     .site-nav {
         max-width: 960px;
         display: flex;
         justify-content: center;
     }
+
     .menu-toggle {
         display: none;
     }
@@ -142,19 +168,31 @@ header::after {
     .site-nav ul {
         display: flex;
     }
+
     .site-nav a:hover,
     .site-nav a:focus {
         color: #4d4dff;
         background-color: transparent;
     }
+    /* ----- ABOUT ----- */
+
+    .about {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
+
+
+
 
 /* ----- LANDING -----*/
 .landing {
     background-image: url("../img/landing.png");
     background-size: cover;
     height: 100vh;
-    margin-top: -52px;
+    margin-top: -30px;
+    background-attachment: fixed;
 }
 
 .landing-text {
@@ -165,19 +203,22 @@ header::after {
     padding-right: 1rem;
     padding-left: 1rem;
 }
+
 .landing-text-inner {
     max-width: 960px;
 }
 
 .btn {
     padding: 0.5rem 2rem;
-    border: 1px #4d4dff solid;
+    border: 1px #FFFFFF solid;
+    background: transparent;
     display: inline-block;
     margin: 2rem 0 0;
     border-radius: 50px;
     text-decoration: none;
     color: #333;
     color: #FFF;
+    transition: all 0.3s ease 0s;
 }
 
 h1 {
@@ -187,5 +228,14 @@ h1 {
 
 .btn:hover {
     background: #3333ff;
+    color: #FFFFFF;
+    border: 1px #3333ff solid;
 }
 
+/* ----- ABOUT ----- */
+
+.about p {
+    margin: 50px 50px 50px 50px;
+    text-align: center;
+    line-height: 1.6;
+}
