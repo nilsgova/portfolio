@@ -68,11 +68,13 @@ header::after {
     background: #464655;
     clip-path: circle(0px at top right);
     transition: clip-path ease-in-out 700ms;
+    opacity: 0;
     /*   display: none; */
 }
 
 .site-nav--open {
     clip-path: circle(250% at top right);
+    opacity: 1;
     /*   display: block; */
 }
 
@@ -93,7 +95,7 @@ header::after {
 
 .site-nav a {
     color: #FFFFFF;
-    display: block;
+    display: block !important;
     padding: 2em 4em 2em 1.5em;
     text-transform: uppercase;
     text-decoration: none;

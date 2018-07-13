@@ -4,7 +4,7 @@ $(document).ready(function (e) {
 
     $('.menu-toggle').click(function () {
 
-        $('.site-nav').toggleClass('site-nav--open', 500);
+        $('.site-nav').toggleClass('site-nav--open');
         $(this).toggleClass('open');
     })
 
