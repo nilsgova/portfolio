@@ -10,11 +10,11 @@
 <body>
 <!-- NAV -->
 <header>
-    <div class="container">
+    <div class="container" id="home">
         <nav class="site-nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="">Skills</a></li>
                 <li><a href="">Work</a></li>
                 <li><a href="">Contact</a></li>
@@ -30,7 +30,7 @@
 <!--- LANDING -->
 <div class="landing landing-text ">
     <div class="landing-text-inner">
-        <h1>Hello, I'm Nils govaerts,</h1>
+        <h1>Hello, I'm Nils Govaerts,</h1>
         <h1>a graphic designer with a rapid growing intrest for web develoment</h1>
         <a href="#contact" class="btn" id="contact-me">
             Contact Me!
@@ -41,7 +41,7 @@
 
 <!-- ABOUT -->
 <section class="about max-width">
-    <h2>ABOUT</h2>
+    <h2 id="about">ABOUT</h2>
     <p>Beeld is leven. Ik ben Nils Govaerts, een 27 jarige en ambitieuze grafische vormgever uit België.
         Één van de mooiste zaken uit mijn vak, is dat ik werelden kan scheppen,
         enkel en alleen door beeld. Het is een voorrecht. Daardoor heb ik een enorme
@@ -49,11 +49,14 @@
         moet je blijven leren. Om die reden zal ik altijd tot de beste resultaten komen.
         Kortom, leergierigheid, perfectionisme en ambitie zijn mijn kernpunten!
     </p>
-    <p>Door mijn leefgierigheid ben ik in de wereld van development terecht gekomen. Wat begon bij het maken van een
+    <p>Door mijn leergierigheid ben ik in de wereld van development terecht gekomen. Wat begon bij het maken van een
         eenvoudige pagina , groeide al snel uit naar grotere uitdagingen. Wat me het meeste aantrekt is dat er
-         zoveel te leren is in de wereld van development en dat de mogelijkheden eindeloos zijn.
+        zoveel te leren is in de wereld van development en dat de mogelijkheden eindeloos zijn.
     </p>
+</section>
 
+<!-- SKILS -->
+<section>
     <div class="skills max-width">
         <div class="card-row-1">
             <div class="card-1">
@@ -72,6 +75,37 @@
             </div>
         </div>
     </div>
+
+    <!-- SKILLBAR -->
+</section>
+
+<section class="skills">
+    <h2>SKILLS</h2>
+
+    <div class="bar flex">
+        <div class="bar fill" style="width: 75%">
+            <div class="tag bold flex"><p>HTML</p></div>
+        </div>
+        <span class="width">80%</span>
+    </div>
+    <!--- END SKILLBAR --->
+
+    <div class="bar flex">
+        <div class="bar fill" style="width: 55%">
+            <div class="tag bold flex"><p>CSS</p></div>
+        </div>
+        <span class="width">55%</span>
+    </div>
+    <!--- END SKILLBAR --->
+
+    <div class="bar flex">
+        <div class="bar fill" style="width: 30%">
+            <div class="tag bold flex"><p>Javascript</p></div>
+        </div>
+        <span class="width">30%</span>
+    </div>
+    <!--- END SKILLBAR --->
+
 </section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
