@@ -11,25 +11,23 @@
 <body>
 <!-- NAV -->
 <header>
-    <div class="container" id="home">
-        <nav class="site-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Work</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
+    <nav id="navCollapse">
+        <ul id="nav">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
 </header>
 <!-- NAV -->
 
 <!--- LANDING -->
-<div class="landing landing-text ">
+<div id="home" class="landing landing-text ">
     <div class="landing-text-inner">
         <h1>Hello, I'm Nils Govaerts,</h1>
         <h1>a graphic designer with a rapid growing intrest for web develoment</h1>
@@ -41,8 +39,8 @@
 <!-- LANDING -->
 
 <!-- ABOUT -->
-<section class="about max-width">
-    <h2 id="about">ABOUT</h2>
+<section id= "about" class="about max-width">
+    <h2>ABOUT</h2>
     <p>Beeld is leven. Ik ben Nils Govaerts, een 27 jarige en ambitieuze grafische vormgever uit België.
         Één van de mooiste zaken uit mijn vak, is dat ik werelden kan scheppen,
         enkel en alleen door beeld. Het is een voorrecht. Daardoor heb ik een enorme
@@ -56,8 +54,8 @@
     </p>
 </section>
 
-<!-- SKILS -->
-<section>
+<!-- SKILLS -->
+<section id="skills">
     <div class="skills max-width">
         <div class="card-row-1">
             <div class="card-1">
@@ -108,6 +106,16 @@
     <!--- END SKILLBAR --->
 
 </section>
+
+    <!--- BACK TO TOP --->
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -41,141 +41,129 @@ h2:after {
 
 /* --- NAVBAR -- */
 
-.container {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
+a {
+    /* color: white; */
 }
 
 header {
-
-    color: #FFFFFF;
-    padding: 1em 1em;
-    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
 }
 
-header::after {
-    content: '';
-    clear: both;
+header nav {
+    float: right;
+    margin-top: 20px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+}
+
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    background: #333;
+    display: none
+}
+
+header nav ul li.active ul {
+    /* use li: hover instead */
     display: block;
 }
 
-.site-nav {
-    position: absolute;
-    top: 100%;
-    right: 0%;
-    background: #464655;
-    clip-path: circle(0px at top right);
-    transition: clip-path ease-in-out 700ms;
-    opacity: 0;
-    /*   display: none; */
+header nav ul li ul li {
+    display: block;
+    width: 200px;
 }
 
-.site-nav--open {
-    clip-path: circle(250% at top right);
-    opacity: 1;
-    /*   display: block; */
-}
-
-.site-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-}
-.site-nav li {
-    border-bottom: 1px solid #575766;
-}
-
-.site-nav li:last-child {
-    border-bottom: none;
-}
-
-.site-nav a {
-    color: #FFFFFF;
-    display: block !important;
-    padding: 2em 4em 2em 1.5em;
-    text-transform: uppercase;
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
     text-decoration: none;
+    display: block;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
-    background: #464655;
-    color: #0099ff;
+header nav ul li a:hover {
+    color: #fff;
+    background: #2196f3;
+}
+
+header nav ul li a.active {
+    background: #2196f3;
 }
 
 .menu-toggle {
-    padding: 1em;
-    position: absolute;
-    top: .5em;
-    right: .5em;
+    color: #2196f3;
+    float: right;
+    line-height: 50px;
+    font-size: 35px;
     cursor: pointer;
+    display: none;
 }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    display: block;
-    background: #0099ff;
-    height: 3px;
-    width: 1.75em;
-    border-radius: 3px;
-    transition: all ease-in-out 500ms;
-}
+@media (max-width: 860px) {
+    header {
+        padding: 0 20px;
+    }
 
-.hamburger::before {
-    transform: translateY(-6px);
-}
+    .menu-toggle {
+        display: block;
+        position: fixed;
+    }
 
-.hamburger::after {
-    transform: translateY(3px);
-}
+    header nav {
+        /* use display none or left:-100% to hide the nav  */
+        /* display: none; */
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        transition: 0.5s;
+    }
 
-.open .hamburger {
-    transform: rotate(45deg);
-}
+    header nav.active {
+        left: 0;
+    }
 
-.open .hamburger::before {
-    opacity: 0;
-}
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
 
-.open .hamburger::after {
-    transform: translateY(-3px) rotate(-90deg);
+    header nav ul li.active ul {
+        position: relative;
+        background: #003e6f;
+    }
+
+    header nav ul li ul li {
+        width: 100%;
+    }
+
+    header nav ul li {
+        padding-right: 0px;
+    }
 }
 
 @media (min-width: 760px) {
 
     /* ---- NAVBAR ---- */
-    .site-nav {
-        max-width: 960px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .site-nav {
-
-        background: transparent;
-        clip-path: initial;
-    }
-
-    .site-nav ul {
-        display: flex;
-    }
-
-    .site-nav a:hover,
-    .site-nav a:focus {
-        color: #0099ff;
-        background-color: transparent;
-    }
-
     /* ----- ABOUT ----- */
     .about {
         display: flex;
@@ -198,9 +186,9 @@ header::after {
 .landing {
     background-image: url("../img/landing.png");
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
-    margin-top: -30px;
-    background-attachment: fixed;
+    width: 100%;
 }
 
 .landing-text {
@@ -293,3 +281,45 @@ span {
     padding: 0 15px 0 0;
 }
 
+/* ----- BACK TO TOP ----- */
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 0px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
