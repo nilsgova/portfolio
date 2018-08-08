@@ -144,6 +144,7 @@ header nav ul li a.active {
         height: calc(100vh - 50px);
         background: #333;
         transition: 0.5s;
+        z-index: 3;
     }
 
     header nav.active {
