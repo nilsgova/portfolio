@@ -159,6 +159,12 @@ header nav ul li a.active {
     header nav ul li {
         padding-right: 0px;
     }
+    h2:after {
+        margin-left: 47%;
+        margin-right: 53%%;
+    }
+
+
 }
 
 @media (min-width: 760px) {
@@ -231,7 +237,7 @@ h1 {
 /* ----- ABOUT ----- */
 
 .about p {
-    margin: 50px 50px 0 50px;
+    margin: 50px 50px 50px 50px;
     text-align: center;
     line-height: 1.6;
 }
@@ -276,10 +282,19 @@ h1 {
     font-size:;
 }
 
+
+
 span {
     display: initial;
     padding: 0 15px 0 0;
 }
+
+/* ---- portfolio ---- */
+
+
+
+
+
 
 /* ----- BACK TO TOP ----- */
 
