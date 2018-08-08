@@ -26,6 +26,14 @@ h2 {
     margin-bottom: 40px;
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 1.4em;
+    color: #444649;
+    margin: 20px 0 20px 0;
+    text-align: left;
+}
+
 h2:after {
     background: none repeat scroll 0 0 #0099ff;
     bottom: -5px;
@@ -169,7 +177,6 @@ header nav ul li a.active {
 
 @media (min-width: 760px) {
 
-    /* ---- NAVBAR ---- */
     /* ----- ABOUT ----- */
     .about {
         display: flex;
@@ -250,7 +257,7 @@ h1 {
 }
 
 .bar {
-    max-width: 90%;
+    max-width: 100%;
     position: relative;
     align-items: flex-end;
     background-color: #eee;
@@ -282,12 +289,27 @@ h1 {
     font-size:;
 }
 
+.width {
+    z-index: 1;
+}
+
+.skillBars {
+    margin: 0 50px 0 50px;
+}
+
+.graphic h3 {
+    text-align: right;
+}
+.graphic {
+    padding-top: 20px;
+}
 
 
 span {
     display: initial;
     padding: 0 15px 0 0;
 }
+
 
 /* ---- portfolio ---- */
 
