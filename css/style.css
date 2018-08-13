@@ -45,6 +45,7 @@ h2:after {
     margin-left: 48%;
     margin-right: 52%;
     margin-top: 5px;
+    margin-bottom: 50px;
 }
 
 /* --- NAVBAR -- */
@@ -109,6 +110,7 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #fff;
     background: #2196f3;
+    transition: all 0.5s ease 0s;
 }
 
 header nav ul li a.active {
@@ -202,7 +204,7 @@ header nav ul li a.active {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100%;
+    margin-bottom: 150px;
 }
 
 .landing-text {
@@ -245,12 +247,20 @@ h1 {
 /* ----- ABOUT ----- */
 
 .about p {
-    margin: 50px 50px 50px 50px;
+    margin: 0 50px 50px 50px;
     text-align: center;
     line-height: 1.6;
 }
 
+.about {
+    margin-bottom: 150px;
+}
+
 /* ----- SKILLBAR ------ */
+.skills {
+    margin-bottom: 200px;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
@@ -303,7 +313,10 @@ h1 {
 }
 .graphic {
     padding-top: 20px;
+    margin-bottom: 50px;
 }
+
+
 
 
 span {
@@ -313,9 +326,146 @@ span {
 
 
 /* ---- portfolio ---- */
+#portfolio {
+    margin-bottom: 200px;
+}
+
+.masthead {
+    background-color: #005b75;
+}
+
+.masthead p, .masthead p a {
+    color: white;
+}
+
+.site-title {
+    color: white;
+}
+
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.card {
+    background: #eeeeee;
+    margin-bottom: 2em;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4em;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 80%;
+}
+
+.main-area {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Flexbox stuff */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+}
+
+.card {
+    flex: 0 1 calc(25% - 1em);
+}
+
+#portfolio {
+    max-width: 960px;
+    margin: 0 auto;
+}
 
 
 
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+
+}
+
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 0 1 100%);
+    }
+
+}
 
 
 
