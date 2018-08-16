@@ -426,6 +426,10 @@ img {
         flex: 0 1 calc(50% - 1em);
     }
 
+    .icon-wrap {
+        flex-direction: column;
+    }
+
 }
 
 
@@ -467,6 +471,32 @@ img {
 
 }
 
+/* ---- FOOTER ---- */
+footer {
+    background-color: #1B242F ;
+    margin-top: 200px;
+}
+
+.icon-wrap {
+    display: flex;
+    flex-direction: row;
+    color: #eeeeee;
+    justify-content: space-between;
+}
+
+
+.fab {
+    color: white;
+    font-size: 60px;
+    margin: 30px 0 30px 0;
+}
+.fa-linkedin {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.fa-github-square {
+    margin-left: 50px;
+}
 
 
 /* ----- BACK TO TOP ----- */
