@@ -6,9 +6,8 @@ $(document).ready(function (e) {
         $('nav').toggleClass('active')
     });
 
-    $('#nav').click(function () {
-        $(this).siblings().removeClass('active');
-        $(this).toggleClass('active');
+    $("nav li").click(function () {
+        $(".active").toggleClass();
     });
 
 
