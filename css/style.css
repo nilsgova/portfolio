@@ -26,6 +26,14 @@ h2 {
     margin-bottom: 40px;
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 1.4em;
+    color: #444649;
+    margin: 20px 0 20px 0;
+    text-align: left;
+}
+
 h2:after {
     background: none repeat scroll 0 0 #0099ff;
     bottom: -5px;
@@ -37,142 +45,140 @@ h2:after {
     margin-left: 48%;
     margin-right: 52%;
     margin-top: 5px;
+    margin-bottom: 50px;
 }
 
 /* --- NAVBAR -- */
 
-.container {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
+a {
+    /* color: white; */
 }
 
 header {
-
-    color: #FFFFFF;
-    padding: 1em 1em;
-    margin: auto;
-}
-
-header::after {
-    content: '';
-    clear: both;
-    display: block;
-}
-
-.site-nav {
     position: absolute;
-    top: 100%;
-    right: 0%;
-    background: #464655;
-    clip-path: circle(0px at top right);
-    transition: clip-path ease-in-out 700ms;
-    /*   display: none; */
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
 }
 
-.site-nav--open {
-    clip-path: circle(250% at top right);
-    /*   display: block; */
+header nav {
+    float: right;
+    margin-top: 20px;
 }
 
-.site-nav ul {
+header nav ul {
     margin: 0;
     padding: 0;
+    display: flex;
+}
+
+header nav ul li {
     list-style: none;
+    position: relative;
+    padding-right: 20px;
 }
 
-}
-.site-nav li {
-    border-bottom: 1px solid #575766;
-}
-
-.site-nav li:last-child {
-    border-bottom: none;
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    background: #333;
+    display: none
 }
 
-.site-nav a {
-    color: #FFFFFF;
+header nav ul li.active ul {
+    /* use li: hover instead */
     display: block;
-    padding: 2em 4em 2em 1.5em;
-    text-transform: uppercase;
-    text-decoration: none;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
-    background: #464655;
-    color: #0099ff;
+header nav ul li ul li {
+    display: block;
+    width: 200px;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    background: #2196f3;
+    transition: all 0.5s ease 0s;
+}
+
+header nav ul li a.active {
+    background: #2196f3;
 }
 
 .menu-toggle {
-    padding: 1em;
-    position: absolute;
-    top: .5em;
-    right: .5em;
+    color: #2196f3;
+    float: right;
+    line-height: 50px;
+    font-size: 35px;
     cursor: pointer;
+    display: none;
 }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    display: block;
-    background: #0099ff;
-    height: 3px;
-    width: 1.75em;
-    border-radius: 3px;
-    transition: all ease-in-out 500ms;
-}
-
-.hamburger::before {
-    transform: translateY(-6px);
-}
-
-.hamburger::after {
-    transform: translateY(3px);
-}
-
-.open .hamburger {
-    transform: rotate(45deg);
-}
-
-.open .hamburger::before {
-    opacity: 0;
-}
-
-.open .hamburger::after {
-    transform: translateY(-3px) rotate(-90deg);
-}
-
-@media (min-width: 760px) {
-
-    /* ---- NAVBAR ---- */
-    .site-nav {
-        max-width: 960px;
-        display: flex;
-        justify-content: center;
+@media (max-width: 860px) {
+    header {
+        padding: 0 20px;
     }
 
     .menu-toggle {
-        display: none;
+        display: block;
+        position: fixed;
     }
 
-    .site-nav {
-
-        background: transparent;
-        clip-path: initial;
+    header nav {
+        /* use display none or left:-100% to hide the nav  */
+        /* display: none; */
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        transition: 0.5s;
+        z-index: 3;
     }
 
-    .site-nav ul {
-        display: flex;
+    header nav.active {
+        left: 0;
     }
 
-    .site-nav a:hover,
-    .site-nav a:focus {
-        color: #0099ff;
-        background-color: transparent;
+    header nav ul {
+        display: block;
+        text-align: center;
     }
+
+    header nav ul li.active ul {
+        position: relative;
+        background: #003e6f;
+    }
+
+    header nav ul li ul li {
+        width: 100%;
+    }
+
+    header nav ul li {
+        padding-right: 0px;
+    }
+    h2:after {
+        margin-left: 47%;
+        margin-right: 53%%;
+    }
+
+
+}
+
+@media (min-width: 760px) {
 
     /* ----- ABOUT ----- */
     .about {
@@ -196,9 +202,9 @@ header::after {
 .landing {
     background-image: url("../img/landing.png");
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
-    margin-top: -30px;
-    background-attachment: fixed;
+    margin-bottom: 150px;
 }
 
 .landing-text {
@@ -241,12 +247,20 @@ h1 {
 /* ----- ABOUT ----- */
 
 .about p {
-    margin: 50px 50px 0 50px;
+    margin: 0 50px 50px 50px;
     text-align: center;
     line-height: 1.6;
 }
 
+.about {
+    margin-bottom: 150px;
+}
+
 /* ----- SKILLBAR ------ */
+.skills {
+    margin-bottom: 200px;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
@@ -254,7 +268,7 @@ h1 {
 }
 
 .bar {
-    max-width: 90%;
+    max-width: 100%;
     position: relative;
     align-items: flex-end;
     background-color: #eee;
@@ -286,8 +300,214 @@ h1 {
     font-size:;
 }
 
+.width {
+    z-index: 1;
+}
+
+.skillBars {
+    margin: 0 50px 0 50px;
+}
+
+.graphic h3 {
+    text-align: right;
+}
+.graphic {
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+
+
 span {
     display: initial;
     padding: 0 15px 0 0;
 }
 
+
+/* ---- portfolio ---- */
+#portfolio {
+    margin-bottom: 200px;
+}
+
+.masthead {
+    background-color: #005b75;
+}
+
+.masthead p, .masthead p a {
+    color: white;
+}
+
+.site-title {
+    color: white;
+}
+
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.card {
+    background: #eeeeee;
+    margin-bottom: 2em;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4em;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 80%;
+}
+
+.main-area {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Flexbox stuff */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+}
+
+.card {
+    flex: 0 1 calc(25% - 1em);
+}
+
+#portfolio {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+
+}
+
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 0 1 100%);
+    }
+
+}
+
+
+
+/* ----- BACK TO TOP ----- */
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 0px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}

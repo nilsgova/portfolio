@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>portfolio nils govaerts</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
@@ -10,25 +11,23 @@
 <body>
 <!-- NAV -->
 <header>
-    <div class="container" id="home">
-        <nav class="site-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Work</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
+    <nav id="navCollapse">
+        <ul id="nav">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
 </header>
 <!-- NAV -->
 
 <!--- LANDING -->
-<div class="landing landing-text ">
+<div id="home" class="landing landing-text ">
     <div class="landing-text-inner">
         <h1>Hello, I'm Nils Govaerts,</h1>
         <h1>a graphic designer with a rapid growing intrest for web develoment</h1>
@@ -40,8 +39,8 @@
 <!-- LANDING -->
 
 <!-- ABOUT -->
-<section class="about max-width">
-    <h2 id="about">ABOUT</h2>
+<section id="about" class="about max-width">
+    <h2>ABOUT</h2>
     <p>Beeld is leven. Ik ben Nils Govaerts, een 27 jarige en ambitieuze grafische vormgever uit België.
         Één van de mooiste zaken uit mijn vak, is dat ik werelden kan scheppen,
         enkel en alleen door beeld. Het is een voorrecht. Daardoor heb ik een enorme
@@ -55,58 +54,183 @@
     </p>
 </section>
 
-<!-- SKILS -->
-<section>
-    <div class="skills max-width">
-        <div class="card-row-1">
-            <div class="card-1">
-            </div>
-            <div class="card-2">
-            </div>
-            <div class="card-3">
-            </div>
-        </div>
-        <div class="card-row-2">
-            <div class="card-4">
-            </div>
-            <div class="card-5">
-            </div>
-            <div class="card-6">
-            </div>
-        </div>
-    </div>
+<!-- SKILLS -->
 
-    <!-- SKILLBAR -->
-</section>
+<!-- SKILLBAR -->
 
-<section class="skills">
+<section class="skills" id="skills">
     <h2>SKILLS</h2>
 
-    <div class="bar flex">
-        <div class="bar fill" style="width: 75%">
-            <div class="tag bold flex"><p>HTML</p></div>
-        </div>
-        <span class="width">80%</span>
-    </div>
-    <!--- END SKILLBAR --->
+    <!--FRONT END -->
 
-    <div class="bar flex">
-        <div class="bar fill" style="width: 55%">
-            <div class="tag bold flex"><p>CSS</p></div>
+    <div class="front-end skillBars">
+        <h3>Web-development</h3>
+        <div class="bar flex">
+            <div class="bar fill" style="width: 75%">
+                <div class="tag bold flex"><p>HTML</p></div>
+            </div>
+            <span class="width">80%</span>
         </div>
-        <span class="width">55%</span>
-    </div>
-    <!--- END SKILLBAR --->
+        <!--- END SKILLBAR --->
 
-    <div class="bar flex">
-        <div class="bar fill" style="width: 30%">
-            <div class="tag bold flex"><p>Javascript</p></div>
+        <div class="bar flex">
+            <div class="bar fill" style="width: 65%">
+                <div class="tag bold flex"><p>CSS</p></div>
+            </div>
+            <span class="width">55%</span>
         </div>
-        <span class="width">30%</span>
+        <!--- END SKILLBAR --->
+
+        <div class="bar flex">
+            <div class="bar fill" style="width: 55%">
+                <div class="tag bold flex"><p>Javascript</p></div>
+            </div>
+            <span class="width">40%</span>
+        </div>
+        <!--- END SKILLBAR --->
+
+        <div class="bar flex">
+            <div class="bar fill" style="width: 50%">
+                <div class="tag bold flex"><p>Jquery</p></div>
+            </div>
+            <span class="width">30%</span>
+        </div>
+        <!--- END SKILLBAR --->
+
+        <div class="bar flex">
+            <div class="bar fill" style="width: 100%">
+                <div class="tag bold flex"><p>Google</p></div>
+            </div>
+            <span class="width">100%</span>
+        </div>
+        <!--- END SKILLBAR --->
     </div>
-    <!--- END SKILLBAR --->
+
+
+    <!-- GRAPHIC DESIGN -->
+
+    <div class="graphic skillBars">
+        <h3>Graphic Design</h3>
+        <div class="bar flex">
+            <div class="bar fill" style="width: 90%">
+                <div class="tag bold flex"><p>Illustrator</p></div>
+            </div>
+            <span class="width">90%</span>
+        </div>
+        <!--- END SKILLBAR --->
+
+        <div class="bar flex">
+            <div class="bar fill" style="width: 85%">
+                <div class="tag bold flex"><p>Photoshop</p></div>
+            </div>
+            <span class="width">85%</span>
+        </div>
+        <!--- END SKILLBAR --->
+
+        <div class="bar flex">
+            <div class="bar fill" style="width: 70%">
+                <div class="tag bold flex"><p>Indesign</p></div>
+            </div>
+            <span class="width">70%</span>
+        </div>
+        <!--- END SKILLBAR --->
+
+        <div class="bar flex">
+            <div class="bar fill" style="width: 90%">
+                <div class="tag bold flex"><p>Flexisign</p></div>
+            </div>
+            <span class="width">90%</span>
+        </div>
+        <!--- END SKILLBAR --->
+
+    </div>
+</section>
+
+<!--- PORTFOLIO --->
+
+<section id="portfolio">
+
+    <h2>PORTFOLIO</h2>
+
+    <div class="centered">
+
+        <section class="cards">
+
+            <article class="card">
+                <a href="https://github.com/nilsgova" target="_blank">
+                    <picture class="thumbnail">
+                        <img src="img/Gitlogo.png" alt="github logo">
+                    </picture>
+                    <div class="card-content">
+                        <h3>Github</h3>
+                        <p>Collection of my work and contribution on github.</p>
+                    </div>
+                    <!-- .card-content -->
+                </a>
+            </article>
+            <!-- .card -->
+
+
+            <article class="card">
+                <a href="https://codepen.io/zyrt3c/#" target="_blank">
+                    <picture class="thumbnail">
+                        <img src="img/codepen.png" alt="codepen logo">
+                    </picture>
+                    <div class="card-content">
+                        <h3>Codepen</h3>
+                        <p>Small code snippets for testing various things</p>
+                    </div>
+                    <!-- .card-content -->
+                </a>
+            </article>
+            <!-- .card -->
+
+            <article class="card">
+                <a href="https://codepen.io/zyrt3c/pen/jpdNjB" target="_blank">
+                    <picture class="thumbnail">
+                        <img src="img/calculator.png" alt="a price calculator">
+                    </picture>
+                    <div class="card-content">
+                        <h3>price calculator</h3>
+                        <p>small callculator for pricing.</p>
+                    </div>
+                    <!-- .card-content -->
+                </a>
+            </article>
+            <!-- .card -->
+<!--
+
+            <article class="card">
+                <a href="#" target="_blank">
+                    <picture class="thumbnail">
+                        <img src="img/prow-featured.jpg" alt="Chocolate filled boller">
+                    </picture>
+                    <div class="card-content">
+                        <h3>Example 4</h3>
+                        <p>Yet to come.</p>
+                    </div>
+                    <!-- .card-content -->
+                </a>
+            </article>
+            <!-- .card -->
+
+        </section>
+        <!-- .cards -->
+
+    </div>
+    <!-- .centered -->
+
 
 </section>
+
+<!--- BACK TO TOP --->
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
