@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 <!-- NAV -->
@@ -42,7 +43,7 @@
     <div class="landing-text-inner">
         <h1>Hallo, ik ben Nils Govaerts,</h1>
         <h1>een grafisch vormgever met een snel groeiende interessen voor front-end devlopment.</h1>
-        <a href="#contact" class="btn" id="contact-me">
+        <a href="#footer" class="btn" id="contact-me">
             Contacteer mij!
         </a>
     </div>
@@ -50,9 +51,9 @@
 <!-- LANDING -->
 
 <!-- ABOUT -->
-<section id="about" class="about max-width">
+<section data-aos="fade-up" id="about" class="about max-width">
     <h2>OVER MIJ</h2>
-    <p>Beeld is leven. Ik ben Nils Govaerts, een 27 jarige en ambitieuze grafische vormgever uit België.
+    <p>Beeld is leven. Ik ben Nils Govaerts, een 28 jarige en ambitieuze grafische vormgever uit België.
         Één van de mooiste zaken uit mijn vak, is dat ik werelden kan scheppen,
         enkel en alleen door beeld. Het is een voorrecht. Daardoor heb ik een enorme
         interesse ontwikkeld voor photoshop en digital art. Om echter verder te blijven evolueren,
@@ -69,7 +70,7 @@
 
 <!-- SKILLBAR -->
 
-<section class="skills" id="skills">
+<section data-aos="fade-up" class="skills" id="skills">
     <h2>VAARDIGHEDEN</h2>
 
     <!--FRONT END -->
@@ -167,7 +168,7 @@
 
 <!--- PORTFOLIO --->
 
-<section id="portfolio">
+<section data-aos="fade-up" id="portfolio">
 
     <h2>MIJN WERK</h2>
 
@@ -262,5 +263,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
